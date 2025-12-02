@@ -41,4 +41,3 @@ El stack incluye las siguientes tecnologías configuradas y listas para usar:
 ### 1. Clonar el repositorio
 ```bash
 git clone git@github.com:hbojorg/bigdata-hadoop-pseudo-distributed-docker.git
-cd nombre-repo
