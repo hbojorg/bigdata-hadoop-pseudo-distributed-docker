@@ -35,7 +35,6 @@ El stack incluye las siguientes tecnologías configuradas y listas para usar:
 
 * Docker Desktop o Docker Engine.
 * Git.
-* (Opcional) Archivos binarios (`.tar.gz`) en la carpeta `resources/` si no deseas descargarlos durante el build.
 
 ## 📦 Instalación y Uso
 
