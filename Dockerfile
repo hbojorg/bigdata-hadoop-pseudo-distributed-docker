@@ -74,30 +74,30 @@ ENV HADOOP_MAPRED_HOME=$HADOOP_HOME
 
 # Step 6: DOWNLOAD + INSTALL BIG DATA STACK
 # ----- HADOOP 3.4.1 -----
-COPY resources/hadoop-3.4.1.tar.gz /
-#RUN wget --no-check-certificate -q https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz && \
-RUN tar -xzf hadoop-3.4.1.tar.gz && \
+#COPY resources/hadoop-3.4.1.tar.gz /
+RUN wget --no-check-certificate -q https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz && \
+    tar -xzf hadoop-3.4.1.tar.gz && \
     rm hadoop-3.4.1.tar.gz && \
     ln -sf /hadoop-3.4.1 $HADOOP_HOME
 
 # ----- HIVE 3.1.3 -----
-COPY resources/apache-hive-3.1.3-bin.tar.gz /
-#RUN wget --no-check-certificate -q https://archive.apache.org/dist/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz && \
-RUN tar -xzf apache-hive-3.1.3-bin.tar.gz && \
+#COPY resources/apache-hive-3.1.3-bin.tar.gz /
+RUN wget --no-check-certificate -q https://archive.apache.org/dist/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz && \
+    tar -xzf apache-hive-3.1.3-bin.tar.gz && \
     rm apache-hive-3.1.3-bin.tar.gz  && \
     ln -sf /apache-hive-3.1.3-bin $HIVE_HOME
 
 # ----- PIG 0.18.0 -----
-COPY resources/pig-0.18.0.tar.gz /
-#RUN wget --no-check-certificate -q https://dlcdn.apache.org/pig/pig-0.18.0/pig-0.18.0.tar.gz && \
-RUN tar -xzf pig-0.18.0.tar.gz && \
+#COPY resources/pig-0.18.0.tar.gz /
+RUN wget --no-check-certificate -q https://dlcdn.apache.org/pig/pig-0.18.0/pig-0.18.0.tar.gz && \
+    tar -xzf pig-0.18.0.tar.gz && \
     rm pig-0.18.0.tar.gz && \
     ln -sf /pig-0.18.0 $PIG_HOME
 
 # ----- SPARK 3.5.7 -----
-COPY resources/spark-3.5.7-bin-hadoop3.tgz /
-#RUN wget --no-check-certificate -q https://dlcdn.apache.org/spark/spark-3.5.7/spark-3.5.7-bin-hadoop3.tgz && \
-RUN tar -xzf spark-3.5.7-bin-hadoop3.tgz && \
+#COPY resources/spark-3.5.7-bin-hadoop3.tgz /
+RUN wget --no-check-certificate -q https://dlcdn.apache.org/spark/spark-3.5.7/spark-3.5.7-bin-hadoop3.tgz && \
+    tar -xzf spark-3.5.7-bin-hadoop3.tgz && \
     rm spark-3.5.7-bin-hadoop3.tgz && \
     ln -sf /spark-3.5.7-bin-hadoop3 $SPARK_HOME
 
